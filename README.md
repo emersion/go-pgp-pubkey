@@ -1,4 +1,4 @@
-# go-pgp-local-pubkey
+# go-pgp-pubkey
 
 Get a PGP public key from various sources:
 * The local GPG database
