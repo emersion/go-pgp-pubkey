@@ -1,3 +1,4 @@
+// Retrieve public PGP keys from the local keyring.
 package local
 
 import (
@@ -19,6 +20,10 @@ func (s *source) Search(query string) (el openpgp.EntityList, err error) {
 	cmd.Stdout = b
 
 	if err = cmd.Run(); err != nil {
+		return
+	}
+
+	if b.Len() == 0 {
 		return
 	}
 
